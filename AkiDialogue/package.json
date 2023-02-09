@@ -1,0 +1,19 @@
+{
+  "name": "com.kurisu.akidialogue",
+  "displayName": "AkiDialogue",
+  "version": "1.2.6",
+  "unity": "2021.3",
+  "description": "对话系统和可视化对话树编辑器Dialogue System And Node based Dialogue Tree Editor.",
+  "keywords": [
+    "Graph",
+    "GraphView",
+    "Dialogue",
+    "DialogueTree",
+    "System"
+  ],
+  "category": "Visual Scripting",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AkiKurisu/AkiDialogue.git?path=/AkiDialogue"
+  }
+}

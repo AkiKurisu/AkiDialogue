@@ -1,0 +1,16 @@
+{
+    "name": "Kurisu.AkiDialogue.Example",
+    "rootNamespace": "Kurisu.AkiDialogue.Example",
+    "references": [
+        "GUID:87a9e2dd50a651748b9436968c280508"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,231 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30b7629501404354d80f6e648a5aac08, type: 3}
+  m_Name: DialogueSO
+  m_EditorClassIdentifier: 
+  root:
+    rid: 7839347687115718723
+  autoSave: 0
+  savePath: Assets
+  blockData:
+  - ChildNodes:
+    - c5d07cc0-4f8e-403c-abbd-06a919c54ed4
+    - 177b2eb5-3bc4-41c6-93aa-5b3b8851bcdf
+    - 845d7678-bdaa-4f49-bcd7-79a07ca0e400
+    - d459e353-77e8-4a53-8f50-1b5b88217cce
+    - 28b598c1-697f-4917-b15d-b98cc6df959b
+    - eece6b45-d2e6-4f2f-b43e-ac41871e6446
+    - dd6e33f8-e1a2-4389-bd14-bd7dd509d19d
+    - 1750de2b-8df8-4acc-b2fd-0878223835c0
+    Position: {x: 748.6667, y: -18.66666}
+    Title: "\u5B9A\u4E49\u5BF9\u8BDD\u7247\u6BB51"
+  sharedVariables:
+  - rid: 7839347687115718724
+  - rid: 7839347687115718725
+  externalDialogueTree: {fileID: 0}
+  Description: 
+  references:
+    version: 2
+    RefIds:
+    - rid: 7839347687115718723
+      type: {class: Root, ns: Kurisu.AkiBT, asm: Kurisu.AkiBT}
+      data:
+        graphPosition:
+          serializedVersion: 2
+          x: 400
+          y: 300
+          width: 81.33334
+          height: 78.66669
+        description: 
+        guid: 858e3739-56c0-4e7e-83c4-5517e0f646f0
+        child:
+          rid: 7839347687115718726
+    - rid: 7839347687115718724
+      type: {class: PieceID, ns: Kurisu.AkiDT, asm: Kurisu.AkiDT}
+      data:
+        isShared: 1
+        mName: "\u5BF9\u8BDD\u7247\u6BB51"
+        value: 
+    - rid: 7839347687115718725
+      type: {class: PieceID, ns: Kurisu.AkiDT, asm: Kurisu.AkiDT}
+      data:
+        isShared: 1
+        mName: "\u5BF9\u8BDD\u7247\u6BB52"
+        value: 
+    - rid: 7839347687115718726
+      type: {class: Dialogue, ns: Kurisu.AkiDT, asm: Kurisu.AkiDT}
+      data:
+        graphPosition:
+          serializedVersion: 2
+          x: 512
+          y: 278
+          width: 136
+          height: 126.66669
+        description: 
+        guid: 22039496-aa3f-4e5a-8b92-5177730049c5
+        children:
+        - rid: 7839347687115718727
+        - rid: 7839347687115718728
+    - rid: 7839347687115718727
+      type: {class: Piece, ns: Kurisu.AkiDT, asm: Kurisu.AkiDT}
+      data:
+        graphPosition:
+          serializedVersion: 2
+          x: 774
+          y: 186
+          width: 136
+          height: 171.33333
+        description: 
+        guid: c5d07cc0-4f8e-403c-abbd-06a919c54ed4
+        children:
+        - rid: 7839347687115718729
+        - rid: 7839347687115718730
+        - rid: 7839347687115718731
+        pieceID:
+          isShared: 1
+          mName: "\u5BF9\u8BDD\u7247\u6BB51"
+          value: 
+    - rid: 7839347687115718728
+      type: {class: Piece, ns: Kurisu.AkiDT, asm: Kurisu.AkiDT}
+      data:
+        graphPosition:
+          serializedVersion: 2
+          x: 724
+          y: 731.3333
+          width: 136
+          height: 123.33331
+        description: 
+        guid: 8ff60aa9-2eb1-40e3-bef2-a24ff5479efc
+        children:
+        - rid: 7839347687115718732
+        pieceID:
+          isShared: 1
+          mName: "\u5BF9\u8BDD\u7247\u6BB52"
+          value: 
+    - rid: 7839347687115718729
+      type: {class: ModifyPieceText, ns: Kurisu.AkiDT, asm: Kurisu.AkiDT}
+      data:
+        graphPosition:
+          serializedVersion: 2
+          x: 982
+          y: 45.999996
+          width: 120
+          height: 145.33334
+        description: 
+        guid: 1750de2b-8df8-4acc-b2fd-0878223835c0
+        Text:
+          isShared: 0
+          mName: 
+          value: "\u4F60\u597D\u554A"
+    - rid: 7839347687115718730
+      type: {class: Option, ns: Kurisu.AkiDT, asm: Kurisu.AkiDT}
+      data:
+        graphPosition:
+          serializedVersion: 2
+          x: 973.3333
+          y: 229.99998
+          width: 136.00006
+          height: 126.66669
+        description: 
+        guid: 28b598c1-697f-4917-b15d-b98cc6df959b
+        children:
+        - rid: 7839347687115718733
+        - rid: 7839347687115718734
+    - rid: 7839347687115718731
+      type: {class: Option, ns: Kurisu.AkiDT, asm: Kurisu.AkiDT}
+      data:
+        graphPosition:
+          serializedVersion: 2
+          x: 957.3333
+          y: 416
+          width: 136.00006
+          height: 126.66666
+        description: 
+        guid: 177b2eb5-3bc4-41c6-93aa-5b3b8851bcdf
+        children:
+        - rid: 7839347687115718735
+        - rid: 7839347687115718736
+    - rid: 7839347687115718732
+      type: {class: ModifyPieceText, ns: Kurisu.AkiDT, asm: Kurisu.AkiDT}
+      data:
+        graphPosition:
+          serializedVersion: 2
+          x: 910
+          y: 731.3333
+          width: 120
+          height: 145.33331
+        description: 
+        guid: 93ed01ab-e6ec-401b-9c4f-5934b2e2debe
+        Text:
+          isShared: 0
+          mName: 
+          value: "\u795D\u4F60\u6709\u7F8E\u597D\u7684\u4E00\u5929"
+    - rid: 7839347687115718733
+      type: {class: ModifyOptionText, ns: Kurisu.AkiDT, asm: Kurisu.AkiDT}
+      data:
+        graphPosition:
+          serializedVersion: 2
+          x: 1196
+          y: 94.66666
+          width: 130.66663
+          height: 145.33333
+        description: 
+        guid: dd6e33f8-e1a2-4389-bd14-bd7dd509d19d
+        Text:
+          isShared: 0
+          mName: 
+          value: "\u5F88\u9AD8\u5174\u89C1\u5230\u4F60"
+    - rid: 7839347687115718734
+      type: {class: ModifyOptionTargetID, ns: Kurisu.AkiDT, asm: Kurisu.AkiDT}
+      data:
+        graphPosition:
+          serializedVersion: 2
+          x: 1196
+          y: 247.99998
+          width: 160.66663
+          height: 147.33334
+        description: 
+        guid: eece6b45-d2e6-4f2f-b43e-ac41871e6446
+        TargetID:
+          isShared: 1
+          mName: "\u5BF9\u8BDD\u7247\u6BB52"
+          value: 
+    - rid: 7839347687115718735
+      type: {class: ModifyOptionText, ns: Kurisu.AkiDT, asm: Kurisu.AkiDT}
+      data:
+        graphPosition:
+          serializedVersion: 2
+          x: 1171.3334
+          y: 404.6667
+          width: 130.66663
+          height: 145.33334
+        description: 
+        guid: d459e353-77e8-4a53-8f50-1b5b88217cce
+        Text:
+          isShared: 0
+          mName: 
+          value: "\u4F60\u8C01\u554A"
+    - rid: 7839347687115718736
+      type: {class: ModifyOptionTargetID, ns: Kurisu.AkiDT, asm: Kurisu.AkiDT}
+      data:
+        graphPosition:
+          serializedVersion: 2
+          x: 1171.3334
+          y: 561.3333
+          width: 160.66663
+          height: 147.33331
+        description: 
+        guid: 845d7678-bdaa-4f49-bcd7-79a07ca0e400
+        TargetID:
+          isShared: 1
+          mName: "\u5BF9\u8BDD\u7247\u6BB51"
+          value: 

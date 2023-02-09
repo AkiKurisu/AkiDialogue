@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba479c9e625a2984b854c639b259de42, type: 3}
+  m_Name: PresetDialogueData
+  m_EditorClassIdentifier: 
+  dialoguePieces:
+  - ID: 00
+    text: "\u6211\u662F\u8C01"
+    options:
+    - text: "\u4F60\u662F\u8C01"
+      targetID: 01
+      scriptableEvents: []
+  - ID: 01
+    text: "\u6211\u5728\u54EA"
+    options:
+    - text: "\u4F60\u5728\u8FD9"
+      targetID: 
+      scriptableEvents:
+      - {fileID: 11400000, guid: d4532e8ff47a4ea47b621dedb225fcc9, type: 2}
+    - text: "\u54C8\u54C8\u54C8"
+      targetID: 
+      scriptableEvents: []

@@ -1,0 +1,21 @@
+{
+    "name": "Kurisu.AkiDT.Editor",
+    "rootNamespace": "Kurisu.AkiDT.Editor",
+    "references": [
+        "GUID:87a9e2dd50a651748b9436968c280508",
+        "GUID:4a9214fa9d60c4c92bfc3c635010f27f",
+        "GUID:3dad40524f69b4faab0f11e825b1b08e",
+        "GUID:7d60d1bb2b836aa42a701717531201cc"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
