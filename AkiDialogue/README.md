@@ -26,17 +26,21 @@
 # AkiDialogue特点Features
 
 * 支持使用ScriptableObject预设对话内容
+  
   <img src="Images/PresetDialogue.png" width="480"/>
+
 * 支持使用可视化编辑器AkiDT构造对话树，实现动态生成对话
 * 对话树框架完全继承自行为树框架，不会出现单端口多连线或回路。
 * 对于动态对话的生成，AkiDT采取一种“描述式”设计模式
+  
   <img src="Images/ModifyDialogue.png" width="480"/>
     
-    如图，我们先定义一个对话片段，然后使用Action结点描述其内容，再定义了一个对话选项，同样使用Action结点描述其内容、目标索引。
+  如图，我们先定义一个对话片段，然后使用Action结点描述其内容，再定义了一个对话选项，同样使用Action结点描述其内容、目标索引。
 
 * 支持使用ScriptableEvents在场景中发送事件，对于需要动态绑定的事件，你可以使用Action结点进行绑定。
 * 支持导出DialogueTreeSO并且支持运行时直接使用DialogueTreeSO输出对话。
-    <img src="Images/SORunner.png" width="480"/>
+
+  <img src="Images/SORunner.png" width="480"/>
 
 # 注意事项Matters need attention
 

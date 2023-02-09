@@ -45,6 +45,15 @@ namespace Kurisu.AkiDT
         {
             generator.AddPiece(piece);
         }
+        public void AddOption(DialogueOption option)
+        {
+            if(tempPiece==null)
+            {
+                Debug.LogError($"<color=#ff2f2f>AkiDT</color>你没有初始化对话片段 无效Option",this);
+                return;
+            }
+            tempPiece.options.Add(option);
+        }
         public void ModifyPieceText(string Text)
         {
             if(tempPiece==null)
@@ -84,6 +93,24 @@ namespace Kurisu.AkiDT
         public void UpdateDialogue()
         {
             DialogueManager.Instance.UpdateDialogueData(generator);
+        }
+        public void RegisterOptionSelectCallBack(System.Action callBack)
+        {
+            if(tempOption==null)
+            {
+                Debug.LogError($"<color=#ff2f2f>AkiDT</color>你没有初始化对话选项 无效RegisterCallBack",this);
+                return;
+            }
+            tempOption.OnSelectAction+=callBack;
+        }
+        public void AddOptionSelectEvent(ScriptableEvent scriptableEvent)
+        {
+            if(tempOption==null)
+            {
+                Debug.LogError($"<color=#ff2f2f>AkiDT</color>你没有初始化对话选项 无效AddEvent",this);
+                return;
+            }
+            tempOption.scriptableEvents.Add(scriptableEvent);
         }
         public void UpdatePiece()
         {

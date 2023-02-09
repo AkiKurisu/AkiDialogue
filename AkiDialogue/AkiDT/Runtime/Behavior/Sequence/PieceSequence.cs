@@ -5,9 +5,9 @@ namespace Kurisu.AkiDT
     [AkiInfo("Piece:对话片段,开始时创建对话片段,所有结点运行结束后向当前对话添加片段数据,如果中途出现失败则取消添加")]
     [AkiLabel("Piece")]
     [AkiGroup("Dialogue")]
+    [CopyDisable]
     public class Piece : Composite
     {
-        public override bool Copiable => false;
         [SerializeField,AkiLabel("片段ID"),Tooltip("你不需要填写该共享变量,因为其值会在运行时自动生成")]
         private PieceID pieceID;
         private IDialogueTree dialogueTree;
