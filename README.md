@@ -26,17 +26,21 @@
 # AkiDialogue特点Features
 
 * 支持使用ScriptableObject预设对话内容
+  
   <img src="Images/PresetDialogue.png" width="480"/>
+
 * 支持使用可视化编辑器AkiDT构造对话树，实现动态生成对话
 * 对话树框架完全继承自行为树框架，不会出现单端口多连线或回路。
 * 对于动态对话的生成，AkiDT采取一种“描述式”设计模式
+  
   <img src="Images/ModifyDialogue.png" width="480"/>
     
-    如图，我们先定义一个对话片段，然后使用Action结点描述其内容，再定义了一个对话选项，同样使用Action结点描述其内容、目标索引。
+  如图，我们先定义一个对话片段，然后使用Action结点描述其内容，再定义了一个对话选项，同样使用Action结点描述其内容、目标索引。
 
 * 支持使用ScriptableEvents在场景中发送事件，对于需要动态绑定的事件，你可以使用Action结点进行绑定。
 * 支持导出DialogueTreeSO并且支持运行时直接使用DialogueTreeSO输出对话。
-    <img src="Images/SORunner.png" width="480"/>
+
+  <img src="Images/SORunner.png" width="480"/>
 
 # 注意事项Matters need attention
 
@@ -47,10 +51,10 @@
 * Nodes返回Running会导致对话树无法生成对话，而返回Failure会使子结点无法运行，从而我们可以实现一些分支逻辑。
 * 你可以使用行为树中的Conditional结点对一些数值进行判断，例如判断玩家的等级、经验值，根据结果提供不同的对话内容或选项。
 * 你可以使用行为树中的Composite结点对其他结点进行组合，例如Selector可以实现依次判断，Parallel支持同时判断。
-* 对于行为树中的BuiltIn Action结点，我只推荐使用Math、Vector3、Debug结点，其余例如Animator、Navmesh我更推荐在AkiBT行为树中使用，因为每次调用PlayDialogue只会触发一次Update，你无法在对话树中实现时序行为，因此在对话树中使用最多只能触发一次Action，当然如果你希望对话树判断了A后，对话树自动执行A行为（瞬间行为，例如切换表情，播放特效），这也是可行方案。
+* 对于行为树中的BuiltIn Action结点，我只推荐使用Math、Vector3、Debug结点，其余例如Animator、Navmesh我更推荐在AkiBT行为树中使用，因为每次调用PlayDialogue只会触发一次Update，你无法在对话树中实现时序行为（即依赖于Unity生命周期），因此通常情况下在对话树中同一Action结点在一次PlayDialogue中只能触发一次。
 
 # 使用方法How To Use
-以下是一段对话的生成流程
+以下是一段正常对话的生成流程
 
 1. 创建Dialogue结点开始描述对话内容
 <img src="Images/DialogueNode.png" width="480"/>
@@ -63,7 +67,14 @@
 5. 使用ModifyOptionTargetID结点描述选项目标ID，如上图所示，每个Piece都有自己的PieceID，对话选项选择后可以指向一个新的片段，因此我们只需要在下拉菜单中找所需片段即可。
 
 6. 使用ModifyOptionText结点描述选项内容
+   
+# 高级用法:CallBack
 
+  1. 和行为树不同，对话树不会主动进行Update，但这并不代表我们无法使用一些延时的操作。这个需求常见于选项触发后修改了一个变量，而后续的对话内容依赖于该变量。因此我们无法通过ModifyTargetID直接进行跳转，因为一旦使用PlayDialogue，对话内容就已经构造完成，我们无法在对话中修改已构造的内容。更好的做法是在玩家点击选项后再生成下一段对话，我们可以使用内置的PlayDialogueTree来播放其他对话树。也可也使用CallBack来构造一个回调。
+  
+  2. 如下图所示：我们为Option定义了内容，但不定义任何TargetID，而是定义了一个回调CallBack。因此对话系统会在该选项选中后触发CallBack，再运行该结点之后的结点。图中即重新构造一段新的对话。需要注意的是，新构造的对话(图中为CallBack之后的Dialogue)和之前的对话没有联系，因此你不应在之后的选项索引到之前的对话片段ID(PieceID)。
+   
+<img src="Images/CallBack.png" width="480"/>
 
 # 样例说明Example Info
 1. 由于AkiDT对话树只负责对话数据的生成，要体验对话必须有UI，我在Example中提供了一套简单的UserInterface，因此你可以在DialogueExample场景中直接体验AkiDialogue提供的三种对话生成方式。

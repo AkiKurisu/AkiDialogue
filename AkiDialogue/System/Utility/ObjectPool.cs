@@ -3,7 +3,7 @@ using System.Collections.Generic;
 namespace Kurisu.AkiDialogue.Utility
 {
     /// <summary>
-    /// 参考自凉鞋 JKFrame https://github.com/Joker-YF/JKFrame
+    /// 参考自Joker JKFrame https://github.com/Joker-YF/JKFrame
     /// </summary>
     public class PoolManager
     {

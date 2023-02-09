@@ -11,7 +11,7 @@ public class ScriptableEvent : ScriptableObject
         public string _devDescription = "";
     #endif
     public event Action OnTriggerEvent;
-    public void Trigger()
+    public virtual void Trigger()
     {
         OnTriggerEvent?.Invoke();
     }

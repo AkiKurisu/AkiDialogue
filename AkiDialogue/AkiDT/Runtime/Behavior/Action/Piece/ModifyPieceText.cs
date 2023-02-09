@@ -9,9 +9,8 @@ namespace Kurisu.AkiDT
     {
         [SerializeField]
         private SharedString Text;
-        public override void Awake()
+        public override void OnAwake()
         {
-           base.Awake();
            InitVariable(Text);
         }
         protected override Status OnUpdate()

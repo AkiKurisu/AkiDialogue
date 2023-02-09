@@ -27,13 +27,11 @@ namespace Kurisu.AkiDialogue
             OnDialogueOpenEvent=new AkiEvent();
             OnDialogueCloseEvent=new AkiEvent();
             OnDialoguePiecePlayEvent=new AkiEvent<DialoguePiece>();
-            OnDialogueDataUpdateEvent=new AkiEvent();
             OnDialogueOverEvent=new AkiEvent();
         }
         public AkiEvent OnDialogueOpenEvent{get;private set;}
         public AkiEvent<DialoguePiece> OnDialoguePiecePlayEvent{get;private set;}
         public AkiEvent OnDialogueCloseEvent{get;private set;}
-        public AkiEvent OnDialogueDataUpdateEvent{get;private set;}
         public AkiEvent OnDialogueOverEvent{get;private set;}
         public IProvideDialogue CurrentDialogue=>dialogue;
         private Queue<IProvideDialogue> dialogueQueue=new Queue<IProvideDialogue>();

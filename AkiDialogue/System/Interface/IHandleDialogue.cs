@@ -31,11 +31,6 @@ namespace Kurisu.AkiDialogue
         /// <value></value>
         public AkiEvent OnDialogueOverEvent{get;}
         /// <summary>
-        /// 对话数据更新事件
-        /// </summary>
-        /// <value></value>
-        public AkiEvent OnDialogueDataUpdateEvent{get;}
-        /// <summary>
         /// 对话打开事件
         /// </summary>
         /// <value></value>
