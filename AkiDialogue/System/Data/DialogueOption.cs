@@ -16,6 +16,13 @@ public class DialogueOption
     /// </summary>
     [HideInInspector]
     public System.Action OnSelectAction;
+    public DialogueOption SetUp(string text,string targetID=null,System.Action onSelectAction=null)
+    {
+        this.text=text;
+        this.targetID=targetID;
+        this.OnSelectAction=onSelectAction;
+        return this;
+    }
     public DialogueOption Reset()
     {
         text=string.Empty;

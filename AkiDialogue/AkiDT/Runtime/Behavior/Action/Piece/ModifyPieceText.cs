@@ -7,7 +7,7 @@ namespace Kurisu.AkiDT
     [AkiGroup("Piece")]
     public class ModifyPieceText : DialogueAction
     {
-        [SerializeField]
+        [SerializeField,Multiline]
         private SharedString Text;
         public override void OnAwake()
         {

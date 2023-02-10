@@ -50,6 +50,11 @@ namespace Kurisu.AkiDialogue
         {
             dialoguePieces.Add(piece);
         }
+        public DialoguePiece FindPiece(string pieceID)
+        {
+            if(dialogueIndex.ContainsKey(pieceID))return dialogueIndex[pieceID];
+            return null;
+        }
         public static DialoguePiece CreatePiece()
         {
             return PoolManager.Instance.GetObject<DialoguePiece>().Reset();

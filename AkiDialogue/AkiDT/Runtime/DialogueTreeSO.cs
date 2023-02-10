@@ -17,6 +17,8 @@ namespace Kurisu.AkiDT
         private DialogueGenerator generator=new DialogueGenerator(true);
         private DialoguePiece tempPiece;
         private DialogueOption tempOption;
+        public string CurrentPieceText=>tempPiece?.text;
+        public string CurrentOptionText=>tempOption?.text;
         public void ClearDialogue()
         {
             generator.Clear();
@@ -143,6 +145,10 @@ namespace Kurisu.AkiDT
             {
                 if(variable is PieceID)(variable as PieceID).Value=System.Guid.NewGuid().ToString();
             }
+        }
+        internal DialoguePiece FindPiece(string pieceID)
+        {
+            return generator.FindPiece(pieceID);
         }
     }
 }

@@ -5,25 +5,6 @@ using Kurisu.AkiDialogue;
 using Kurisu.AkiDialogue.Utility;
 namespace Kurisu.AkiDT
 {
-    public interface IDialogueTree:IBehaviorTree
-    {
-        void ClearDialogue();
-        void ClearPiece();
-        void ClearOption();
-        void CreatePiece();
-        void CreateOption();
-        void AddPiece(DialoguePiece piece);
-        void AddOption(DialogueOption option);
-        void RegisterOptionSelectCallBack(System.Action callBack);
-        void AddOptionSelectEvent(ScriptableEvent scriptableEvent);
-        void ModifyPieceText(string Text);
-        void ModifyPieceID(string ID);
-        void ModifyOptionText(string Text);
-        void ModifyOptionTarget(string target);
-        void UpdateDialogue();
-        void UpdatePiece();
-        void UpdateOption();
-    }
     [DisallowMultipleComponent]
     public class DialogueTree :MonoBehaviour,IDialogueTree
     {
@@ -110,6 +91,8 @@ namespace Kurisu.AkiDT
         [SerializeField]
         private bool useSOData;
         public bool UseSOData{get=>useSOData;set=>useSOData=value;}
+        public string CurrentPieceText=>tempPiece?.text;
+        public string CurrentOptionText=>tempOption?.text;
         public void ClearDialogue()
         {
             generator.Clear();
@@ -240,6 +223,16 @@ namespace Kurisu.AkiDT
         }
         private void Start() {
             root.Start();
+        }
+        /// <summary>
+        /// 查找指定ID的对话片段
+        /// </summary>
+        /// <param name="pieceID"></param>
+        /// <returns></returns>
+        public DialoguePiece FindPiece(string pieceID)
+        {
+            if(!useSOData)return generator.FindPiece(pieceID);
+            return externalDialogueTree.FindPiece(pieceID);
         }
         /// <summary>
         /// 播放对话
