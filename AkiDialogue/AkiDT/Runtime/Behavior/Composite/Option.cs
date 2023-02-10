@@ -1,4 +1,5 @@
 using Kurisu.AkiBT;
+using UnityEngine;
 namespace Kurisu.AkiDT
 {
     [AkiInfo("Option:选项,开始时创建选项,所有结点运行结束后向当前对话片段添加选项,如果中途出现失败则取消添加")]
@@ -7,8 +8,11 @@ namespace Kurisu.AkiDT
     public class Option : Composite
     {
         private IDialogueTree dialogueTree;
+        [SerializeField,AkiLabel("选项内容")]
+        private SharedString optionText;
         protected override void OnAwake() {
             dialogueTree=tree as IDialogueTree;
+            InitVariable(optionText);
         }
         public override bool CanUpdate()
         {
@@ -26,8 +30,8 @@ namespace Kurisu.AkiDT
         protected override Status OnUpdate()
         {
             dialogueTree.CreateOption();
+            dialogueTree.ModifyOptionText(optionText.Value);
             return UpdateWhileSuccess(0);
-
         }
 
         private Status UpdateWhileSuccess(int start)

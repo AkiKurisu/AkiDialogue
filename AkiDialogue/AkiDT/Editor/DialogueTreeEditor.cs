@@ -24,7 +24,7 @@ public class DialogueTreeEditor : UnityEditor.Editor
         var label=new Label(LabelText);
         label.style.fontSize=20;
         myInspector.Add(label);
-        myInspector.styleSheets.Add((StyleSheet)Resources.Load("AkiBT/Inspector", typeof(StyleSheet)));
+        myInspector.styleSheets.Add(BehaviorTreeSetting.GetInspectorStyle("AkiDT"));
         var field=new PropertyField(serializedObject.FindProperty("externalDialogueTree"),"外部对话树");
         myInspector.Add(field);
         var toggle=new Toggle("运行时使用外部对话树");
@@ -66,7 +66,7 @@ public class DialogueTreeEditor : UnityEditor.Editor
             var label=new Label(LabelText);
             label.style.fontSize=20;
             myInspector.Add(label);
-            myInspector.styleSheets.Add((StyleSheet)Resources.Load("AkiBT/Inspector", typeof(StyleSheet)));
+            myInspector.styleSheets.Add(BehaviorTreeSetting.GetInspectorStyle("AkiDT"));
             var field=new PropertyField(serializedObject.FindProperty("externalDialogueTree"),"外部对话树");
             myInspector.Add(field);
             myInspector.Add(new Label("对话树描述"));

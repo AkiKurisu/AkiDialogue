@@ -10,10 +10,13 @@ namespace Kurisu.AkiDT
     {
         [SerializeField,AkiLabel("片段ID"),Tooltip("你不需要填写该共享变量,因为其值会在运行时自动生成")]
         private PieceID pieceID;
+        [SerializeField,AkiLabel("片段内容")]
+        private SharedString pieceText;
         private IDialogueTree dialogueTree;
         protected override void OnAwake() {
             dialogueTree=tree as IDialogueTree;
             InitVariable(pieceID);
+            InitVariable(pieceText);
         }
         public override bool CanUpdate()
         {
@@ -32,8 +35,8 @@ namespace Kurisu.AkiDT
         {
             dialogueTree.CreatePiece();
             dialogueTree.ModifyPieceID(pieceID.Value);
+            dialogueTree.ModifyPieceText(pieceText.Value);
             return UpdateWhileSuccess(0);
-
         }
 
         private Status UpdateWhileSuccess(int start)

@@ -13,8 +13,9 @@ public class DialogueEditorWindow : GraphEditorWindow
         [MenuItem("Tools/AkiDT Editor")]
         private static void ShowEditorWindow()
         {
+            string path=EditorUtility.OpenFolderPanel("选择保存路径",Application.dataPath,"").Replace(Application.dataPath,string.Empty);
             var treeSO=ScriptableObject.CreateInstance<DialogueTreeSO>();
-            AssetDatabase.CreateAsset(treeSO,"Assets/DialogueTreeSO.asset");
+            AssetDatabase.CreateAsset(treeSO,"Assets/"+path+"DialogueTreeSO.asset");
             AssetDatabase.SaveAssets();
             Show(treeSO);
         }

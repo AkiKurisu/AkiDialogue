@@ -60,9 +60,11 @@
 以下是一段正常对话的生成流程
 
 1. 创建Dialogue结点开始描述对话内容
+
 <img src="Images/DialogueNode.png" width="480"/>
 
 2. 创建Piece结点开始描述对话片段，当你Create一个新的Piece结点时，它会自动生成一个PieceID，并且在左侧黑板区域显示，它的运行方式与AkiBT中支持的SharedVariable共享变量一致，但不同的是你无需填写该变量的值只需知道变量的名称，其值会在游戏运行时自动生成。你可以通过双击黑板中的PieceID来修改名称。同时基于PieceID的唯一性，你无法复制Piece结点。
+
 <img src="Images/PieceNode.png" width="480"/>
 
 3. 使用ModifyPieceText结点描述对话内容

@@ -11,8 +11,6 @@ namespace Kurisu.AkiDT
         [SerializeField,HideInInspector]
         private DialogueTreeSO externalDialogueTree;
         public sealed override BehaviorTreeSO ExternalBehaviorTree=>externalDialogueTree;
-        [Multiline,SerializeField,AkiLabel("对话描述")]
-        public string Description;
         # endif
         private DialogueGenerator generator=new DialogueGenerator(true);
         private DialoguePiece tempPiece;

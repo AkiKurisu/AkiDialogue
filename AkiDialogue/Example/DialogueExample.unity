@@ -223,17 +223,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   root:
-    rid: 5711636545320780106
+    rid: 5711636591822766336
   sharedVariables: []
   externalDialogueTree: {fileID: 0}
   autoSave: 0
   savePath: Assets
-  blockData: []
+  blockData:
+  - ChildNodes:
+    - f9309bd1-761b-4b68-9b95-aa9ba5a82ed9
+    - 4ba851da-8aa5-4086-947f-82f86a926efd
+    Position: {x: 498, y: 236}
+    Title: "\u4F7F\u7528SO\u52A0\u8F7D\u6570\u636E"
   useSOData: 0
   references:
     version: 2
     RefIds:
-    - rid: 5711636545320780106
+    - rid: 5711636591822766336
       type: {class: Root, ns: Kurisu.AkiBT, asm: Kurisu.AkiBT}
       data:
         graphPosition:
@@ -245,8 +250,8 @@ MonoBehaviour:
         description: 
         guid: 858e3739-56c0-4e7e-83c4-5517e0f646f0
         child:
-          rid: 5711636545320780107
-    - rid: 5711636545320780107
+          rid: 5711636591822766337
+    - rid: 5711636591822766337
       type: {class: Dialogue, ns: Kurisu.AkiDT, asm: Kurisu.AkiDT}
       data:
         graphPosition:
@@ -256,20 +261,20 @@ MonoBehaviour:
           width: 135
           height: 99
         description: 
-        guid: 
+        guid: f9309bd1-761b-4b68-9b95-aa9ba5a82ed9
         children:
-        - rid: 5711636545320780108
-    - rid: 5711636545320780108
+        - rid: 5711636591822766338
+    - rid: 5711636591822766338
       type: {class: LoadDialogueData, ns: Kurisu.AkiDT, asm: Kurisu.AkiDT}
       data:
         graphPosition:
           serializedVersion: 2
           x: 701
           y: 300
-          width: 308
+          width: 332
           height: 120
         description: 
-        guid: 
+        guid: 4ba851da-8aa5-4086-947f-82f86a926efd
         dialogueData: {fileID: 11400000, guid: 7737bedf581d3044f8aadf812d46b9a7, type: 2}
 --- !u!4 &268626864
 Transform:
@@ -411,6 +416,7 @@ GameObject:
   m_Component:
   - component: {fileID: 705507995}
   - component: {fileID: 705507994}
+  - component: {fileID: 705507996}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -495,6 +501,26 @@ Transform:
   m_Father: {fileID: 1376820639}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &705507996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705507993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 1
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
 --- !u!1 &947078058
 GameObject:
   m_ObjectHideFlags: 0
@@ -621,6 +647,10 @@ MonoBehaviour:
           isShared: 1
           mName: "\u5BF9\u8BDD\u7247\u6BB51"
           value: 
+        pieceText:
+          isShared: 0
+          mName: 
+          value: 
     - rid: 7839347687115718742
       type: {class: Piece, ns: Kurisu.AkiDT, asm: Kurisu.AkiDT}
       data:
@@ -637,6 +667,10 @@ MonoBehaviour:
         pieceID:
           isShared: 1
           mName: "\u5BF9\u8BDD\u7247\u6BB52"
+          value: 
+        pieceText:
+          isShared: 0
+          mName: 
           value: 
     - rid: 7839347687115718743
       type: {class: ModifyPieceText, ns: Kurisu.AkiDT, asm: Kurisu.AkiDT}
@@ -667,6 +701,10 @@ MonoBehaviour:
         children:
         - rid: 7839347687115718747
         - rid: 7839347687115718748
+        optionText:
+          isShared: 0
+          mName: 
+          value: 
     - rid: 7839347687115718745
       type: {class: Option, ns: Kurisu.AkiDT, asm: Kurisu.AkiDT}
       data:
@@ -681,6 +719,10 @@ MonoBehaviour:
         children:
         - rid: 7839347687115718749
         - rid: 7839347687115718750
+        optionText:
+          isShared: 0
+          mName: 
+          value: 
     - rid: 7839347687115718746
       type: {class: ModifyPieceText, ns: Kurisu.AkiDT, asm: Kurisu.AkiDT}
       data:
@@ -1105,6 +1147,10 @@ MonoBehaviour:
           isShared: 1
           mName: "\u5BF9\u8BDD\u7247\u6BB51"
           value: 
+        pieceText:
+          isShared: 0
+          mName: 
+          value: 
     - rid: 5711636566453780485
       type: {class: ModifyPieceText, ns: Kurisu.AkiDT, asm: Kurisu.AkiDT}
       data:
@@ -1134,6 +1180,10 @@ MonoBehaviour:
         children:
         - rid: 5711636566453780488
         - rid: 5711636566453780489
+        optionText:
+          isShared: 0
+          mName: 
+          value: 
     - rid: 5711636566453780487
       type: {class: Option, ns: Kurisu.AkiDT, asm: Kurisu.AkiDT}
       data:
@@ -1148,6 +1198,10 @@ MonoBehaviour:
         children:
         - rid: 5711636566453780490
         - rid: 5711636566453780491
+        optionText:
+          isShared: 0
+          mName: 
+          value: 
     - rid: 5711636566453780488
       type: {class: ModifyOptionText, ns: Kurisu.AkiDT, asm: Kurisu.AkiDT}
       data:
@@ -1237,6 +1291,10 @@ MonoBehaviour:
           isShared: 1
           mName: "\u5BF9\u8BDD\u7247\u6BB52"
           value: 
+        pieceText:
+          isShared: 0
+          mName: 
+          value: 
     - rid: 5711636566453780494
       type: {class: ModifyPieceText, ns: Kurisu.AkiDT, asm: Kurisu.AkiDT}
       data:
@@ -1265,6 +1323,10 @@ MonoBehaviour:
         guid: 7782ca35-e526-4031-8a6a-e97daf18ea8f
         children:
         - rid: 5711636566453780496
+        optionText:
+          isShared: 0
+          mName: 
+          value: 
     - rid: 5711636566453780496
       type: {class: ModifyOptionText, ns: Kurisu.AkiDT, asm: Kurisu.AkiDT}
       data:
