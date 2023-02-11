@@ -5,10 +5,11 @@ namespace Kurisu.AkiDT
     [AkiInfo("Option:选项,开始时创建选项,所有结点运行结束后向当前对话片段添加选项,如果中途出现失败则取消添加")]
     [AkiLabel("Option")]
     [AkiGroup("Dialogue")]
+    [NoValidate]
     public class Option : Composite
     {
         private IDialogueTree dialogueTree;
-        [SerializeField,AkiLabel("选项内容")]
+        [SerializeField,AkiLabel("选项内容"),Multiline]
         private SharedString optionText;
         protected override void OnAwake() {
             dialogueTree=tree as IDialogueTree;

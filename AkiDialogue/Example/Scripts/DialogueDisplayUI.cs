@@ -22,6 +22,8 @@ namespace Kurisu.AkiDialogue.Example
         [SerializeField]
         private Transform[] slotPoints;
         private IHandleDialogue dialogueSystem;
+        [SerializeField]
+        private float delayForWord=0.1f;
         void Awake()
         {
             dialogueSystem=GetComponent<IHandleDialogue>();
@@ -65,8 +67,9 @@ namespace Kurisu.AkiDialogue.Example
         private StringBuilder stringBuilder=new StringBuilder();
         IEnumerator PlayText(string text,System.Action callBack)
         {
-            WaitForSeconds seconds=new WaitForSeconds(0.2f);
+            WaitForSeconds seconds=new WaitForSeconds(delayForWord);
             int count=text.Length;
+            mainText.text=string.Empty;
             stringBuilder.Clear();
             for(int i=0;i<count;i++)
             {
@@ -78,7 +81,7 @@ namespace Kurisu.AkiDialogue.Example
         }
         IEnumerator LateEnd()
         {
-            yield return new WaitForSeconds(1.5f);
+            yield return new WaitForSeconds(1f);
             dialogueSystem.DialogueOver();
         }
         

@@ -7,7 +7,7 @@ namespace Kurisu.AkiDT
     [AkiGroup("Option")]
     public class ModifyOptionText : DialogueAction
     {
-        [SerializeField]
+        [SerializeField,AkiLabel("选项内容")]
         private SharedString Text;
         public override void OnAwake()
         {

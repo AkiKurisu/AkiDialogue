@@ -8,7 +8,7 @@ namespace Kurisu.AkiDT
     [AkiGroup("Option")]
     public class ModifyOptionEvent : DialogueAction
     {
-        [SerializeField]
+        [SerializeField,AkiLabel("选项事件")]
         private ScriptableEvent scriptableEvent;
         protected override Status OnUpdate()
         {
