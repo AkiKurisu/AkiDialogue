@@ -1,0 +1,19 @@
+{
+    "name": "Kurisu.AkiDT.Localization",
+    "rootNamespace": "Kurisu.AkiDT.Localization",
+    "references": [
+        "GUID:7d60d1bb2b836aa42a701717531201cc",
+        "GUID:4a9214fa9d60c4c92bfc3c635010f27f",
+        "GUID:eec0964c48f6f4e40bc3ec2257ccf8c5",
+        "GUID:84651a3751eca9349aac36a66bba901b"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

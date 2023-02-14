@@ -7,15 +7,10 @@ namespace Kurisu.AkiDialogue
     /// </summary>
     public class DialogueGenerator : IProvideDialogue
     {
-        public DialogueGenerator(bool needConvert=false)
-        {
-            this.needConvert=needConvert;
-        }
         private List<DialoguePiece> dialoguePieces=new List<DialoguePiece>();
         private Dictionary<string,DialoguePiece>dialogueIndex=new Dictionary<string, DialoguePiece>();
         private int nextIndex;
-        private readonly bool needConvert;
-        public bool NeedConvert => needConvert;
+        public bool NeedConvert {get;set;}
         void IProvideDialogue.Generate()
         {
             nextIndex=0;

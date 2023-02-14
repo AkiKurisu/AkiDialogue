@@ -11,7 +11,7 @@ namespace Kurisu.AkiDT
         #region  Tree Part
         [HideInInspector,SerializeReference]
         private Root root = new Root();
-        Object IBehaviorTree._Object=>this;
+        Object IBehaviorTree._Object=>gameObject;
         [HideInInspector]
         [SerializeReference]
         private List<SharedVariable> sharedVariables = new List<SharedVariable>();
@@ -85,7 +85,7 @@ namespace Kurisu.AkiDT
         /// 需要本地化
         /// </summary>
         /// <returns></returns>
-        private DialogueGenerator generator=new DialogueGenerator(true);
+        private DialogueGenerator generator=new DialogueGenerator();
         private DialoguePiece tempPiece;
         private DialogueOption tempOption;
         [SerializeField]
@@ -259,5 +259,6 @@ namespace Kurisu.AkiDT
             externalDialogueTree.Init(gameObject);
             externalDialogueTree.Update();
         }
+        public void SetConvert(bool needConvert)=>generator.NeedConvert=needConvert;
     }
 }

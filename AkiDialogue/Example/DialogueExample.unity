@@ -264,6 +264,7 @@ MonoBehaviour:
         guid: f9309bd1-761b-4b68-9b95-aa9ba5a82ed9
         children:
         - rid: 5711636591822766338
+        needConvert: 0
     - rid: 5711636591822766338
       type: {class: LoadDialogueData, ns: Kurisu.AkiDT, asm: Kurisu.AkiDT}
       data:
@@ -625,6 +626,7 @@ MonoBehaviour:
         children:
         - rid: 5711636614861553668
         - rid: 5711636614861553669
+        needConvert: 0
     - rid: 5711636614861553668
       type: {class: Piece, ns: Kurisu.AkiDT, asm: Kurisu.AkiDT}
       data:
@@ -1056,6 +1058,7 @@ MonoBehaviour:
         guid: 22039496-aa3f-4e5a-8b92-5177730049c5
         children:
         - rid: 5711636614861553701
+        needConvert: 0
     - rid: 5711636614861553701
       type: {class: Piece, ns: Kurisu.AkiDT, asm: Kurisu.AkiDT}
       data:
@@ -1153,6 +1156,7 @@ MonoBehaviour:
         guid: 980dadc2-82fd-44b0-aef6-a6d0e9e7cf25
         children:
         - rid: 5711636614861553707
+        needConvert: 0
     - rid: 5711636614861553707
       type: {class: Piece, ns: Kurisu.AkiDT, asm: Kurisu.AkiDT}
       data:

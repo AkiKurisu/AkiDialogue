@@ -12,7 +12,7 @@ namespace Kurisu.AkiDT
         private DialogueTreeSO externalDialogueTree;
         public sealed override BehaviorTreeSO ExternalBehaviorTree=>externalDialogueTree;
         # endif
-        private DialogueGenerator generator=new DialogueGenerator(true);
+        private DialogueGenerator generator=new DialogueGenerator();
         private DialoguePiece tempPiece;
         private DialogueOption tempOption;
         public string CurrentPieceText=>tempPiece?.text;
@@ -148,5 +148,6 @@ namespace Kurisu.AkiDT
         {
             return generator.FindPiece(pieceID);
         }
+        public void SetConvert(bool needConvert)=>generator.NeedConvert=needConvert;
     }
 }

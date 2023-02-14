@@ -12,7 +12,7 @@ namespace Kurisu.AkiDT.Editor
         public PieceIDResolver(FieldInfo fieldInfo) : base(fieldInfo)
         {
         }
-        protected override void SetTree(BehaviorTreeView ownerTreeView)
+        protected override void SetTree(ITreeView ownerTreeView)
         {
            editorField.InitField(ownerTreeView);
         }
@@ -28,7 +28,7 @@ namespace Kurisu.AkiDT.Editor
     }
     public class PieceIDField : BaseField<PieceID>
     {
-        private BehaviorTreeView treeView;
+        private ITreeView treeView;
         private DropdownField nameDropdown;
         private SharedVariable bindExposedProperty;
         private readonly bool isReferenced;
@@ -37,7 +37,7 @@ namespace Kurisu.AkiDT.Editor
             AddToClassList("SharedVariableField");
             this.isReferenced=isReferenced;
         }
-        internal void InitField(BehaviorTreeView treeView)
+        internal void InitField(ITreeView treeView)
         {
             this.treeView=treeView;
             treeView.OnPropertyNameEditingEvent+=(variable)=>
@@ -63,7 +63,7 @@ namespace Kurisu.AkiDT.Editor
             else label=variable.Name;
             value.Name=variable.Name;
         }
-        private static List<string> GetList(BehaviorTreeView treeView)
+        private static List<string> GetList(ITreeView treeView)
         {
             return treeView.ExposedProperties
             .Where(x=>x.GetType()==typeof(PieceID))

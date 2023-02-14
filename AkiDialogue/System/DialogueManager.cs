@@ -24,10 +24,15 @@ namespace Kurisu.AkiDialogue
             return instance;
         }
         private void Awake() {
+            if (instance!=null&&instance!=this)Destroy(gameObject);
+            else instance=this; 
             OnDialogueOpenEvent=new AkiEvent();
             OnDialogueCloseEvent=new AkiEvent();
             OnDialoguePiecePlayEvent=new AkiEvent<DialoguePiece>();
             OnDialogueOverEvent=new AkiEvent();
+        }
+        private void OnDestroy() {
+            if(instance==this)instance=null;
         }
         public AkiEvent OnDialogueOpenEvent{get;private set;}
         public AkiEvent<DialoguePiece> OnDialoguePiecePlayEvent{get;private set;}

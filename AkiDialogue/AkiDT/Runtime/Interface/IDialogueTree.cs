@@ -86,5 +86,6 @@ namespace Kurisu.AkiDT
         /// 更新对话选项
         /// </summary>
         void UpdateOption();
+        void SetConvert(bool needConvert);
     }
 }

@@ -25,7 +25,7 @@ public class DialogueEditorWindow : GraphEditorWindow
             window.Show();
             window.Focus();
         } 
-        protected override BehaviorTreeView CreateView(IBehaviorTree behaviorTree)
+        protected sealed override BehaviorTreeView CreateView(IBehaviorTree behaviorTree)
         {
             return new DialogueTreeView(behaviorTree, this);
         }

@@ -7,7 +7,7 @@ namespace Kurisu.AkiDialogue
     {
 
         /// <summary>
-        /// 需要本地化处理
+        /// 需要文本处理
         /// </summary>
         /// <value></value>
         public bool NeedConvert{get;}
